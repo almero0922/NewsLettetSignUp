@@ -1,5 +1,5 @@
 :root{
---tomato: hsl(4, 100%, 67%);
+--tomato: #ff6257;
 --darkSlateGrey: hsl(234, 29%, 20%);
 --charcoalGrey: hsl(235, 18%, 26%);
 --grey: hsl(231, 7%, 72%);
@@ -14,6 +14,12 @@
 body{
     width: 100vw;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.main-1{
+    width: 375px;
+    height: auto;
 }
 .container-info{
     padding: 1.8rem;
@@ -66,13 +72,60 @@ body{
     border-radius: 8px;
     font-size: 16px;
     padding-left: 1rem;
+    cursor: pointer;
+    outline: none;
 }
-#ca-subscribe{
+.container-input input:focus{
+    border: 2px solid var(--darkSlateGrey);
+}
+.ca-button{
     height: 54px;
     background-color: var(--darkSlateGrey);
     border: none;
     border-radius: 8px;
     color: white;
     font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition-delay: 2s;
+}
+.ca-button:hover{
+    background-image: linear-gradient(to right top, #f75077, #fd5369, #ff595a, #ff614b, #ff6a3a);
+    transition-delay: 0s;
+}
+.btn-width{
+    width: 100%;
+}
+.main-2{
+    width: 375px;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+.info-subscribed{
+    margin-top: 50%;
+}
+.icon-success{
+    display: block;
+    height: 68px;
+    width: 68px;
+    background-image: url('./assets/images/icon-success.svg');
+    background-repeat: no-repeat;
+    background-position: cover;
+    margin-bottom: 2.8rem;
+}
+.info-subscribed h1{
+    font-size: 40px;
+    color: var(--darkSlateGrey);
+    margin-bottom: 1rem;
+}
+.info-subscribed p{
+    font-size: 18px;
+    line-height: 30px;
+    padding-right: 0.8rem;
+}
+.info-subscribed p>span{
     font-weight: bold;
 }
