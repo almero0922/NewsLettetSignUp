@@ -1,9 +1,11 @@
 :root{
 --tomato: #ff6257;
---darkSlateGrey: hsl(234, 29%, 20%);
+--darkSlateGrey: #242742;
 --charcoalGrey: hsl(235, 18%, 26%);
 --grey: hsl(231, 7%, 72%);
 --white: hsl(0, 0%, 100%);
+--tomato1: hsl(4, 100%, 90%);
+--inputFocus: hsl(234, 29%, 20%);
 }
 *{
     margin: 0;
@@ -19,13 +21,18 @@ body{
 }
 .main-1{
     width: 375px;
-    height: auto;
+}
+.main-1 img{
+    margin-bottom: 1.4rem;
 }
 .container-info{
-    padding: 1.8rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    align-items: space-between;
+    height: 100%;
 }
 .info-title{
     font-size: 38px;
@@ -40,7 +47,7 @@ body{
     margin-bottom: 1.8rem;
 }
 .checklist{
-    margin-bottom: 2.4rem;
+    margin-bottom: 4rem;
 }
 .checklist-item{
     display: flex;
@@ -60,12 +67,13 @@ body{
 }
 .container-input{
     margin-bottom: 1.4rem;
+    margin-top: 4rem;
 }
 .container-input p{
     font-size: 12px;
     margin-bottom: 0.4rem;
 }
-.container-input input{
+.input-valid{
     height: 54px;
     width: 100%;
     border: 1px solid var(--grey);
@@ -76,7 +84,7 @@ body{
     outline: none;
 }
 .container-input input:focus{
-    border: 2px solid var(--darkSlateGrey);
+    border: 2px solid var(--inputFocus);
 }
 .ca-button{
     height: 54px;
@@ -96,13 +104,26 @@ body{
 .btn-width{
     width: 100%;
 }
+.text-email{
+    display: flex;
+    justify-content: space-between;
+}
+.errorMessage{
+    color: var(--tomato);
+    font-size: 12px;
+    font-weight: bold;
+}
+.input-error{
+    background-color: var(--tomato1);
+    border: 1px solid var(--tomato);
+}
 .main-2{
     width: 375px;
     min-height: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 }
 .info-subscribed{
     margin-top: 50%;
@@ -128,4 +149,7 @@ body{
 }
 .info-subscribed p>span{
     font-weight: bold;
+}
+.display-none{
+    display: none;
 }
