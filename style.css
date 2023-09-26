@@ -153,3 +153,47 @@ body{
 .display-none{
     display: none;
 }
+@media(min-width: 1440px){
+    body{
+        align-items: center;
+        background-color: var(--darkSlateGrey);
+    }
+    .main-1{
+        display: flex;
+        width: 900px;
+        height: 640px;
+        background-color: white;
+        border-radius: 15px;
+        padding: 1.4rem;
+    }
+    .container-img{
+        order: 2;
+    }
+    .container-img img{
+        content: url('./assets/images/illustration-sign-up-desktop.svg');
+    }
+    .info-title{
+        margin-top: 4rem;
+        font-size: 56px;
+    }
+    .container-input{
+        margin-top: 1.4rem;
+    }
+    .checklist{
+        margin-bottom: 1rem;
+    }
+    .main-2{
+        background-color: white;
+        border-radius: 15px;
+        width: 440px;
+        height: 440px;
+    }
+    .info-subscribed{
+        margin-top: 0px;
+    }
+    .icon-success{
+        width: 48px;
+        height: 48px;
+        background-size: contain;
+    }
+}
